@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget widgetId="" appId="11488973" channelCode="000" version="0.1">
+    <!--  11483284 pop appid   11483832 En -->
+	<name>测试uexTaskSubmit</name>
+	<description>测试插件Demo</description>
+	<author email="3g2win@mail.com">3g2win</author>
+	<icon src="icon.png"></icon>
+	<license href="http://3g2win.com"></license>
+	<content src="uexTaskSubmit.html" encoding="utf-8"></content>
+	<logserverip>192.168.1.28</logserverip>
+	<obfuscation>false</obfuscation>
+	<updateurl>http://192.168.1.28:8080/widget/update</updateurl>
+	<showmyspace>false</showmyspace>
+	<bgcolor>#fefefe</bgcolor>
+	<widgetOne version="[widgetOneVersion]" />
+	<orientation>15</orientation>
+	<!--<uexTaskSubmitLoginURL>http://newsso.appcan.cn</uexTaskSubmitLoginURL> -->
+	<!--<uexTaskSubmitBaseURL>https://xt.appcan.cn/coopDevelopment_online</uexTaskSubmitBaseURL> -->
+	<useAppCanTaskSubmitSSOHost>http://newsso.appcan.cn</useAppCanTaskSubmitSSOHost>
+	<useAppCanTaskSubmitHost>https://zymobi.appcan.cn/coopDevelopment</useAppCanTaskSubmitHost>
+	<useAppCanTaskSubmitFloatOpen>true</useAppCanTaskSubmitFloatOpen>
+
+</widget>

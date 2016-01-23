@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+    <Button
+        android:id="@+id/plugin_task_submit_btnFloat"
+        android:background="@drawable/plugin_task_submit_task"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+         />
+    <Button
+        android:id="@+id/plugin_task_submit_btnScreenShot"
+        android:background="@drawable/plugin_task_submit_pencil"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+         />
+    <Button
+        android:id="@+id/plugin_task_submit_btnLogin"
+        android:background="@drawable/plugin_task_submit_login"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+         />
+    
+
+</LinearLayout>

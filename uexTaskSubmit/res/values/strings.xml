@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <!-- uexTaskSubmit Activitys -->
+    <string name="plugin_task_submit_title_activity_markbugs">MarkbugsActivity</string>
+    <string name="plugin_task_submit_title_activity_create_task">CreateTaskActivity</string>
+    <string name="plugin_task_submit_title_activity_login_dialog">LoginDialogActivity</string>
+    <string name="plugin_task_submit_title_activity_quit_dialog">QuitDialogActivity</string>
+
+    <!-- login_dialog -->
+    <string name="uexTaskSubmit_login_error">账户或者密码错误!</string>
+    <string name="uexTaskSubmit_ticket_null">登录失败，ticket为null</string>
+    <string name="uexTaskSubmit_http_format_error">Http格式错误!</string>
+    <string name="uexTaskSubmit_login_network_tips">请检查您的网络设置</string>
+    <string name="uexTaskSubmit_login_overtime">连接超时，请检查您的网络设置</string>
+    <string name="plugin_task_submit_account">账号</string>
+    <string name="plugin_task_submit_account_tips">请输入账号</string>
+    <string name="plugin_task_submit_password">密码</string>
+    <string name="plugin_task_submit_password_tips">请输入密码</string>
+    <string name="plugin_task_submit_login">登录</string>
+    <string name="plugin_task_submit_save_password">保存密码</string>
+
+    <!-- quit_dialog -->
+    <string name="plugin_task_submit_quit_tips">确定要放弃编辑吗？</string>
+    <string name="plugin_task_submit_quit_post_tips">确定要放弃提交吗？</string>
+    <string name="plugin_task_submit_confirm_tips">确定要提交信息吗？</string>
+
+    <!-- create_task_activity_layout -->
+    <string name="plugin_task_submit_name">标题</string>
+    <string name="plugin_task_submit_name_tips">请输入标题</string>
+    <string name="plugin_task_submit_detail">描述</string>
+    <string name="plugin_task_submit_detail_tips">描述内容</string>
+    <string name="plugin_task_submit_priority">优先级</string>
+    <string name="plugin_task_submit_process">流程</string>
+    <string name="plugin_task_submit_tag">标签</string>
+    <string name="plugin_task_submit_deadline">截止日期</string>
+    <string name="plugin_task_submit_leader">负责人</string>
+
+    <!-- imageView Description -->
+    <string name="plugin_task_submit_divider_line">我是一只分割线。。。</string>
+    <string name="plugin_task_submit_right_arrow">我是一只右箭头。。。</string>
+
+    <!-- URL -->
+    <string name="plugin_task_submit_sso_host">http://newsso.appcan.cn</string><!-- http://192.168.4.168:8080 -->
+    <string name="plugin_task_submit_host">https://xt.appcan.cn/coopDevelopment_online</string><!-- http://192.168.1.83:9083 -->
+
+</resources>

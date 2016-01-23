@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<script type="text/javascript">
+
+	<!-- 启动这个html时进行的操作，进行回调   -->
+	window.uexOnload = function(type) {
+		//得到URL地址信息回调   
+		uexTaskSubmit.cbGetHostURL = function(opCode, dataType, data) {
+			alert("------cbGetHostURL------\n"+ JSON.stringify(data));
+			//alert("------cbGetHostURL------\n"+ data);
+		}
+	}
+	
+	function floatSwitch(){
+		var flag = document.getElementById("flag").value;
+		uexTaskSubmit.floatSwitch(flag);
+	}
+	
+</script>
+</head>
+
+<body>
+	<div class="tit">uexTaskSubmit对象</div>
+	<div class="conbor">
+		<div class="consj">
+
+			<span>1.uexTaskSubmit手机端提交bug插件</span>
+			<div class="tcxx" id="f1">将此插件添加，会出现一个浮动小球</div>
+				
+			<span>2.getHostURL接口</span>
+			<div class="tcxx" id="getURL">调用此方法得到URL地址信息</div>
+			<input class="btn" type="button" value="得到URL地址信息"
+				onclick="uexTaskSubmit.getHostURL();" /><br /> <br />
+				
+			<span>3.floatSwitch接口</span>
+			<div class="tcxx" id="floatSwitch">调用此方法开启或关闭floatBall</div>
+			<span>flag:  boolean型</span>
+			<input class="textbox" type="text" id="flag" value="false">
+			<input class="btn" type="button" value="开启或关闭floatBall"
+				onclick="floatSwitch();" /><br /> <br />
+
+		</div>
+	</div>
+</body>
+</html>

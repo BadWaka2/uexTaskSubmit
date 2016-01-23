@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/plugin_task_submit_loTag"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@null" >
+        
+        <TextView 
+            android:id="@+id/plugin_task_submit_loTag_markleft"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/plugin_task_submit_mark_pic"/>
+        
+        <TextView 
+            android:id="@+id/plugin_task_submit_loTag_frameleft"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plugin_task_submit_m_left"/>
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvPictureTagLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plugin_task_submit_m_center"
+            android:gravity="center"
+            android:hint="标签"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:minWidth="40dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/plugin_task_submit_etPictureTagLabel"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:background="@drawable/plugin_task_submit_m_center"
+            android:gravity="center_vertical"
+            android:hint="标签"
+            android:imeOptions="actionDone"
+            android:maxEms="20"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="12dp"
+            android:visibility="gone" />
+        
+        <TextView 
+            android:id="@+id/plugin_task_submit_loTag_frameright"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plugin_task_submit_m_right"/>
+        
+        <TextView 
+            android:id="@+id/plugin_task_submit_loTag_markright"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/plugin_task_submit_mark_pic"/>
+    </LinearLayout>
+
+</LinearLayout>

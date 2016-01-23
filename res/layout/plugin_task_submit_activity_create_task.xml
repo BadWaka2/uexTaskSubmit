@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置滚动条 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/plugin_task_submit_name"
+            android:textColor="#939393"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/plugin_task_submit_etName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@id/plugin_task_submit_tvName"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:hint="@string/plugin_task_submit_name_tips"
+            android:singleLine="true"
+            android:textColor="#D1D1D1"
+            android:textColorHint="#D1D1D1"
+            android:textSize="18sp" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.02"
+        android:background="#E2E2E2"
+        android:contentDescription="@string/plugin_task_submit_divider_line" />
+
+    <!-- 描述栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.6"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/plugin_task_submit_detail"
+            android:textColor="#939393"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/plugin_task_submit_etDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/plugin_task_submit_tvDetail"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/plugin_task_submit_tvDetail"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="@string/plugin_task_submit_detail_tips"
+            android:textColor="#D1D1D1"
+            android:textColorHint="#D1D1D1"
+            android:textSize="18sp" >
+        </EditText>
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.02"
+        android:background="#E2E2E2"
+        android:contentDescription="@string/plugin_task_submit_divider_line" />
+
+    <!-- 优先级 -->
+
+    <RelativeLayout
+        android:id="@+id/plugin_task_submit_layoutPriority"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/plugin_task_submit_layout_press_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/plugin_task_submit_priority"
+            android:textColor="#939393"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/plugin_task_submit_imgPriority"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/plugin_task_submit_right_arrow"
+            android:src="@drawable/plugin_task_submit_arrow_right" />
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvPriorityTips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/plugin_task_submit_imgPriority"
+            android:gravity="center"
+            android:textColor="#D1D1D1"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.02"
+        android:background="#E2E2E2"
+        android:contentDescription="@string/plugin_task_submit_divider_line" />
+
+    <!-- 流程 -->
+
+    <RelativeLayout
+        android:id="@+id/plugin_task_submit_layoutProcess"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/plugin_task_submit_layout_press_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvProcess"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/plugin_task_submit_process"
+            android:textColor="#939393"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/plugin_task_submit_imgProcess"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/plugin_task_submit_right_arrow"
+            android:src="@drawable/plugin_task_submit_arrow_right" />
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvProcessTips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/plugin_task_submit_imgProcess"
+            android:gravity="center"
+            android:textColor="#D1D1D1"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.02"
+        android:background="#E2E2E2"
+        android:contentDescription="@string/plugin_task_submit_divider_line" />
+
+    <!-- 标签 -->
+
+    <RelativeLayout
+        android:id="@+id/plugin_task_submit_layoutTag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/plugin_task_submit_layout_press_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvTag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/plugin_task_submit_tag"
+            android:textColor="#939393"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/plugin_task_submit_imgTag"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/plugin_task_submit_right_arrow"
+            android:src="@drawable/plugin_task_submit_arrow_right" />
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvTagTips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/plugin_task_submit_imgTag"
+            android:gravity="center"
+            android:textColor="#D1D1D1"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.02"
+        android:background="#E2E2E2"
+        android:contentDescription="@string/plugin_task_submit_divider_line" />
+
+    <!-- 截止日期 -->
+
+    <RelativeLayout
+        android:id="@+id/plugin_task_submit_layoutDeadline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/plugin_task_submit_layout_press_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/plugin_task_submit_deadline"
+            android:textColor="#939393"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/plugin_task_submit_imgDeadline"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/plugin_task_submit_right_arrow"
+            android:src="@drawable/plugin_task_submit_arrow_right" />
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvDeadlineTips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/plugin_task_submit_imgDeadline"
+            android:gravity="center"
+            android:textColor="#D1D1D1"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.02"
+        android:background="#E2E2E2"
+        android:contentDescription="@string/plugin_task_submit_divider_line" />
+
+    <!-- 负责人 -->
+
+    <RelativeLayout
+        android:id="@+id/plugin_task_submit_layoutLeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/plugin_task_submit_layout_press_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvLeader"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/plugin_task_submit_leader"
+            android:textColor="#939393"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/plugin_task_submit_imgLeader"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/plugin_task_submit_right_arrow"
+            android:src="@drawable/plugin_task_submit_arrow_right" />
+
+        <TextView
+            android:id="@+id/plugin_task_submit_tvLeaderTips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/plugin_task_submit_imgLeader"
+            android:gravity="center"
+            android:textColor="#D1D1D1"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.02"
+        android:background="#E2E2E2"
+        android:contentDescription="@string/plugin_task_submit_divider_line" />
+
+    <!-- 按钮栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.6"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/plugin_task_submit_btnConfirm"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/plugin_task_submit_btn_confirm_background"
+            android:text="@string/confirm"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/plugin_task_submit_btnCancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/plugin_task_submit_btn_cancel_background"
+            android:text="@string/cancel"
+            android:textColor="#919191"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<org.zywx.wbpalmstar.plugin.uexTaskSubmit.DrawView.PictureTagLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/plugin_task_submit_layoutScreenShot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
