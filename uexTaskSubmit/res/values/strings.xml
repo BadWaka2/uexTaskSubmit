@@ -41,7 +41,7 @@
     <string name="plugin_task_submit_right_arrow">我是一只右箭头。。。</string>
 
     <!-- URL -->
-    <string name="plugin_task_submit_sso_host">http://newsso.appcan.cn</string><!-- http://192.168.4.168:8080 -->
-    <string name="plugin_task_submit_host">https://xt.appcan.cn/coopDevelopment_online</string><!-- http://192.168.1.83:9083 -->
+    <string name="tasksubmit_sso_host">http://newsso.appcan.cn</string><!-- http://192.168.4.168:8080 -->
+    <string name="tasksubmit_host">https://xt.appcan.cn/coopDevelopment_online</string><!-- http://192.168.1.83:9083 -->
 
 </resources>

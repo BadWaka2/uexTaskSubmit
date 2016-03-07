@@ -16,8 +16,10 @@
 	<orientation>15</orientation>
 	<!--<uexTaskSubmitLoginURL>http://newsso.appcan.cn</uexTaskSubmitLoginURL> -->
 	<!--<uexTaskSubmitBaseURL>https://xt.appcan.cn/coopDevelopment_online</uexTaskSubmitBaseURL> -->
+	
 	<useAppCanTaskSubmitSSOHost>http://newsso.appcan.cn</useAppCanTaskSubmitSSOHost>
 	<useAppCanTaskSubmitHost>https://zymobi.appcan.cn/coopDevelopment</useAppCanTaskSubmitHost>
+	
 	<useAppCanTaskSubmitFloatOpen>true</useAppCanTaskSubmitFloatOpen>
 
 </widget>

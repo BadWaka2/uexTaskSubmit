@@ -246,12 +246,16 @@ public class HttpRequest {
 		HttpGet httpGet = new HttpGet(userLoginUrl);
 		try {
 			HttpResponse httpResponse = httpClient.execute(httpGet);
+			int statusCode = httpResponse.getStatusLine().getStatusCode();
+			Log.i(TAG, "userLogin的statusCode是" + statusCode);
+
 			if (httpResponse.getStatusLine().getStatusCode() != 200) {
 				Log.i(TAG, "user login Failure StatusCode " + httpResponse.getStatusLine().getStatusCode());
 				return null;
 			}
+
 			String s = EntityUtils.toString(httpResponse.getEntity());
-			// Log.i(TAG, "userLogin " + s);
+			Log.i(TAG, "userLogin " + s);
 			handleCookie(BASE_URL, httpResponse);
 			userLoginResponse = TaskSubmitUtils.analysisJSONForUserLoginResponse(s);
 		} catch (Exception e) {

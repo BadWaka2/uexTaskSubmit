@@ -56,7 +56,7 @@ public class LoginDialogActivity extends Activity {
 
 			// 未超时
 			if (msg.what == 1) {
-				if(threadLogin != null){
+				if (threadLogin != null) {
 					threadLogin.setLoginCancel(true);
 					threadLogin = null;
 				}
@@ -69,8 +69,8 @@ public class LoginDialogActivity extends Activity {
 					saveUserInfo();
 				} else {
 					String message = EUExUtil.getString("uexTaskSubmit_login_error");
-					if(userLoginResponse != null && !TextUtils.isEmpty(userLoginResponse.statusInfo)){
-						//message = userLoginResponse.statusInfo;
+					if (userLoginResponse != null && !TextUtils.isEmpty(userLoginResponse.statusInfo)) {
+						// message = userLoginResponse.statusInfo;
 					}
 					new AlertDialog.Builder(LoginDialogActivity.this).setTitle(EUExUtil.getResStringID("prompt"))
 							.setMessage(message).setCancelable(true)
@@ -113,12 +113,12 @@ public class LoginDialogActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		Log.i(TAG, "onDestroy");
-		if(threadLogin != null){
+		if (threadLogin != null) {
 			threadLogin.setLoginCancel(true);
 			threadLogin = null;
 		}
 		super.onDestroy();
-		//saveUserInfo();// 在这里将账号密码信息储存在SharedPreferences
+		// saveUserInfo();// 在这里将账号密码信息储存在SharedPreferences
 	}
 
 	/**
@@ -136,9 +136,13 @@ public class LoginDialogActivity extends Activity {
 	 * 初始化数据
 	 */
 	private void initData() {
+
 		createTaskPost = new CreateTaskPost();
 		// encryptionDES = new EncryptionDES();// 初始化加密类对象
 		readUserInfo();// 将用户账户密码从SharedPreferences中读出来
+
+		etAccount.setText("kai.wang@zymobi.com");
+		etPassword.setText("15199361293wk");
 	}
 
 	/**
@@ -150,7 +154,7 @@ public class LoginDialogActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				//int netType = getNetworkType();
+				// int netType = getNetworkType();
 				// 检查网络状态
 				if (!TaskSubmitUtils.isNetworkAvailable(LoginDialogActivity.this)) {
 					new AlertDialog.Builder(LoginDialogActivity.this).setTitle(EUExUtil.getResStringID("prompt"))
@@ -164,18 +168,18 @@ public class LoginDialogActivity extends Activity {
 					progressDialog.setCancelable(true);// 按返回键时关闭
 					progressDialog.setCanceledOnTouchOutside(false);
 					progressDialog.setOnCancelListener(new OnCancelListener() {
-						
+
 						@Override
 						public void onCancel(DialogInterface dialog) {
-							if(threadLogin != null){
+							if (threadLogin != null) {
 								threadLogin.setLoginCancel(true);
 								threadLogin = null;
 							}
 						}
 					});
 					// 新建线程访问网络，登录
-					if(threadLogin == null){
-						threadLogin = new LoginThread(username,password);
+					if (threadLogin == null) {
+						threadLogin = new LoginThread(username, password);
 						threadLogin.start();
 					}
 				}
@@ -298,28 +302,29 @@ public class LoginDialogActivity extends Activity {
 		etPassword.setText(password);
 		cbSavePassword.setChecked(IS_SAVE_PASSWORD);// 设置之前的选中状态
 	}
-	
+
 	/**
 	 * 登录线程
+	 * 
 	 * @author d
 	 */
 	private class LoginThread extends Thread {
 		private boolean loginCancel = false;
 		private String username;
 		private String password;
-		
-		public LoginThread(String username,String password) {
+
+		public LoginThread(String username, String password) {
 			this.username = username;
 			this.password = password;
 		}
-		
+
 		@Override
 		public void run() {
 			try {
-				if(loginCancel)
+				if (loginCancel)
 					return;
 				UserLoginResponse userLoginResponse = HttpRequest.login(LoginDialogActivity.this, username, password);
-				if(!loginCancel){
+				if (!loginCancel) {
 					Message message = Message.obtain(handler);
 					message.obj = userLoginResponse;
 					message.what = 1;
@@ -330,8 +335,8 @@ public class LoginDialogActivity extends Activity {
 			}
 			interrupt();
 		}
-		
-		public void setLoginCancel(boolean isCancel){
+
+		public void setLoginCancel(boolean isCancel) {
 			this.loginCancel = isCancel;
 		}
 	}

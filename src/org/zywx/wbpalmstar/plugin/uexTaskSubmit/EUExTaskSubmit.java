@@ -52,7 +52,8 @@ public class EUExTaskSubmit extends EUExBase {
 
 	/**
 	 * 构造方法，入口类需传入context和EBrowserView浏览器Activity
-	 * @throws Exception 
+	 * 
+	 * @throws Exception
 	 */
 	public EUExTaskSubmit(Context context, EBrowserView browserView) {
 		super(context, browserView);
@@ -98,10 +99,10 @@ public class EUExTaskSubmit extends EUExBase {
 		}
 		// 如果在config里没有这两个地址，则读我们默认的
 		if (TextUtils.isEmpty(configLoginURL)) {
-			configLoginURL = EUExUtil.getString("plugin_task_submit_sso_host");
+			configLoginURL = EUExUtil.getString("tasksubmit_sso_host");
 		}
 		if (TextUtils.isEmpty(configBaseURL)) {
-			configBaseURL = EUExUtil.getString("plugin_task_submit_host");
+			configBaseURL = EUExUtil.getString("tasksubmit_host");
 		}
 	}
 
