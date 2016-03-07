@@ -2,7 +2,8 @@
 <uexplugins>
     <plugin uexName="uexTaskSubmit" version="3.1.1.1" build = "1">
 		<info>1:增加了添加上一次崩溃日志和log日志的功能；增加了小球的动画效果.
-		      1.1:将strings文件里host字段名改为：tasksubmit_sso_host	和	tasksubmit_host.</info>
+		      1.1:将strings文件里host字段名改为：tasksubmit_sso_host	和	tasksubmit_host.
+		      1.2:删除了测试用数据.</info>
         <build>0:手机端提交bug插件,兼容大众版和企业版,支持https请求.增加getHostURL方法，可以获取到配置的地址.</build>
     </plugin>
 </uexplugins>

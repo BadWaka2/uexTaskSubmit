@@ -141,8 +141,6 @@ public class LoginDialogActivity extends Activity {
 		// encryptionDES = new EncryptionDES();// 初始化加密类对象
 		readUserInfo();// 将用户账户密码从SharedPreferences中读出来
 
-		etAccount.setText("kai.wang@zymobi.com");
-		etPassword.setText("15199361293wk");
 	}
 
 	/**
